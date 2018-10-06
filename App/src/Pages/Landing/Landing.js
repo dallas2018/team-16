@@ -32,11 +32,14 @@ class Landing extends React.Component {
 
   incrementCount () {
     console.log(this.state.pVal + " Before");
-    this.setState({ index: this.state.index + 1, pVal: Math.max(this.state.pVal, this.state.index * 10) });
+    var newindex = this.state.index + 1 >= 7 ? 7 : this.state.index + 1;
+    this.setState({ index: newindex, pVal: Math.max(this.state.pVal, newindex * 15) });
   }
 
   decrementCount () {
-    this.setState({ index: this.state.index - 1 });
+    console.log(this.state.pVal + " After");
+    var newindex = this.state.index - 1 <= 0 ? 0 : this.state.index - 1;
+    this.setState({ index: newindex, pVal: Math.min(this.state.pVal, (newindex) * 15) });
   }
   render () {
     return (
