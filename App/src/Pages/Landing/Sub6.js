@@ -2,7 +2,7 @@ import React from "react";
 import Question from "./Question";
 import Drop from "./Drop";
 import { Flex } from "grid-styled";
-import TextBox from "./TextBox";
+import { Label, Input } from "reactstrap";
 
 class Sub2 extends React.Component {
   constructor (props) {
@@ -32,9 +32,9 @@ class Sub2 extends React.Component {
             <Question title='What is your military status?' />
             <Drop options={["Active Reserve", "Inactive Reserve", "Veteran", "Retired Military", "No Military Service"]} />
           </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Date of Event' />
-            <TextBox />
+          <div style={{ padding: "25px", width: "45vw" }}>
+            <Label for='examplePassword'>Date of Event</Label>
+            <Input />
           </div>
           <div style={{ padding: "25px" }}>
             <Question title='Which branch were you in?' />
