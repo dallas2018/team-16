@@ -3,14 +3,17 @@ import TopBar from "./TopBar";
 import Sub1 from "./Sub1";
 import Sub2 from "./Sub2";
 import Sub3 from "./Sub3";
+import Sub4 from "./Sub4";
 import Sub5 from "./Sub5";
 import Sub6 from "./Sub6";
 import Sub7 from "./Sub7";
+import Sub8 from "./Sub8";
 import Sub9 from "./Sub9";
 
 class Landing extends React.Component {
   constructor (props) {
     super(props);
+    this.options = ["Basic Info", "Demographics", "Youth", "Family", "Education", "Veteran", "Entered", "Employment", "Your Needs"];
     this.state = { width: 0, index: 1, pVal: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.incrementCount = this.incrementCount.bind(this);
@@ -31,20 +34,18 @@ class Landing extends React.Component {
   }
 
   incrementCount () {
-    console.log(this.state.pVal + " Before");
     var newindex = this.state.index + 1 >= 7 ? 7 : this.state.index + 1;
     this.setState({ index: newindex, pVal: Math.max(this.state.pVal, newindex * 15) });
   }
 
   decrementCount () {
-    console.log(this.state.pVal + " After");
     var newindex = this.state.index - 1 <= 0 ? 0 : this.state.index - 1;
     this.setState({ index: newindex, pVal: Math.min(this.state.pVal, (newindex) * 15) });
   }
   render () {
     return (
       <React.Fragment>
-        <TopBar name='Hello' decrementFunc={this.decrementCount} incrementFunc={this.incrementCount} val={this.state.pVal} />
+        <TopBar name={this.options[ this.state.index - 1 ]} decrementFunc={this.decrementCount} incrementFunc={this.incrementCount} val={this.state.pVal} />
         {
           this.state.index === 1 &&
           <Sub1 />
@@ -59,18 +60,26 @@ class Landing extends React.Component {
         }
         {
           this.state.index === 4 &&
-          <Sub5 />
+          <Sub4 />
         }
         {
           this.state.index === 5 &&
-          <Sub6 />
+          <Sub5 />
         }
         {
           this.state.index === 6 &&
-          <Sub7 />
+          <Sub6 />
         }
         {
           this.state.index === 7 &&
+          <Sub7 />
+        }
+        {
+          this.state.index === 8 &&
+          <Sub8 />
+        }
+        {
+          this.state.index === 9 &&
           <Sub9 />
         }
       </React.Fragment>

@@ -6,7 +6,7 @@ import { FontAwesome } from "react-js-vector-icons";
 class TopBar extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { width: 0, showFaqPage: true, sectionName: props.name };
+    this.state = { width: 0, showFaqPage: true };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
   componentDidMount () {
@@ -26,7 +26,7 @@ class TopBar extends React.Component {
     return (
       <React.Fragment>
         <Flex style={{ width: "100%", padding: "50px" }}>
-          <div style={{ fontSize: "35px", padding: "20px" }}>{this.state.sectionName}</div>
+          <div style={{ fontSize: "35px", padding: "20px" }}>{this.props.name}</div>
           <Flex style={{ marginLeft: "-12vw", alignSelf: "center", justifyContent: "center", width: "100%" }}>
             <div onClick={this.props.decrementFunc}>
               <FontAwesome name='chevron-left'

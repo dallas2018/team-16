@@ -1,8 +1,6 @@
 import React from "react";
-import Question from "./Question";
 import { Flex } from "grid-styled";
-import TextBox from "./TextBox";
-import { FormGroup, Label, Input } from "reactstrap";
+import { Form, FormGroup, Label, Input, FormFeedback, FormText } from "reactstrap";
 import axios from "axios";
 
 class Sub1 extends React.Component {
@@ -33,52 +31,45 @@ class Sub1 extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Flex style={{ flexDirection: "column", paddingLeft: "40px", paddingTop: "50px" }} >
-          <div style={{ padding: "25px" }}>
-            <Question title='First Name' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Middle Name' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Last Name' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='How did you hear about us?' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Address' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Social Security #' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Birthday' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Email' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Phone' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='Can we text you?' />
-            <FormGroup check>
-              <Label check>
-                <Input onClick={this.handleClick} type='checkbox' />{" "}
-                Yes
-              </Label><br />
+        <Flex style={{ flexDirection: "column", paddingLeft: "40px", paddingTop: "50px", marginRight: "70vw" }} >
+          <Form>
+            <FormGroup>
+              <Label for='exampleEmail'>Full Name</Label>
+              <Input />
+              <FormFeedback>You will not be able to see this</FormFeedback>
+              <FormText>Ex. Aman V. Gottumukkala</FormText>
             </FormGroup>
-          </div>
+            <FormGroup>
+              <Label for='exampleEmail'>How did you hear about us?</Label>
+              <Input />
+              <FormFeedback>You will not be able to see this</FormFeedback>
+              <FormText>Ex. Aman V. Gottumukkala</FormText>
+            </FormGroup>
+            <FormGroup>
+              <Label for='exampleEmail'>Social Security #</Label>
+              <Input />
+              <FormFeedback>You will not be able to see this</FormFeedback>
+              <FormText>000-00-0000</FormText>
+            </FormGroup>
+            <FormGroup>
+              <Label for='examplePassword'>Birthday</Label>
+              <Input />
+              <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
+              <FormText>01/01/2000</FormText>
+            </FormGroup>
+            <FormGroup>
+              <Label for='exampleEmail'>Email</Label>
+              <Input />
+              <FormFeedback>You will not be able to see this</FormFeedback>
+              <FormText>aman.gottu@gmail.com</FormText>
+            </FormGroup>
+            <FormGroup>
+              <Label for='exampleEmail'>Phone</Label>
+              <Input />
+              <FormFeedback>You will not be able to see this</FormFeedback>
+              <FormText>(###)-###-####</FormText>
+            </FormGroup>
+          </Form>
         </Flex>
       </React.Fragment>
     );
