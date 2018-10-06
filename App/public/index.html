@@ -36,13 +36,51 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>TAMUhack 2019</title>
+    <title>SER Apply</title>
+    <link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+
+    <style>
+      .example {
+        float: right;
+        margin-right: 20px;
+        width: 300px;
+      }
+      .example > h2 {
+        font-family: 'Segoe UI';
+      }
+      #BotChatGoesHere {
+        border: 1px solid #333;
+        float: left;
+        height: 600px;
+        position: relative;
+        width: 460px;
+      }
+    </style>
+
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/CognitiveServices.js"></script>
+
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <div id="BotChatGoesHere"></div>
+    <script>
+      const speechOptions = {
+        speechRecognizer: new BotChat.Speech.BrowserSpeechRecognizer(),
+         speechSynthesizer: new BotChat.Speech.BrowserSpeechSynthesizer()
+      };
+      BotChat.App({
+        directLine: { secret: 'G6JlWv_Xh2g.cwA.rpY.IIbwng8gy1SQyxuTFaUuNdkzde9_hojzjrqXMJ1e0MY' },
+        resize: 'detect',
+        user: { id: 'userid' },
+        bot: { id: 'botid' },
+        speechOptions: speechOptions
+        // sendTyping: true,    // defaults to false. set to true to send 'typing' activities to bot (and other users) when user is typing
+      }, document.getElementById('BotChatGoesHere'));
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
