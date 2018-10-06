@@ -41,11 +41,16 @@ export default class FourSquare extends React.Component {
   render () {
     return (
       <div style={{ marginLeft: "2vw", marginTop: "20vh" }}>
+        <p style={{ position: "absolute", bottom: "60vh", left: "4vh" }}>
+        Purpose of Question:
+        Answers here will be used to customize and shorten your applications. <br />
+        Please answer honestly. Answers will be kept private and will only be used to personalize your application.
+        </p>
         <Row>
           <Col sm='4'>
             <Card>
               <CardBody id='YDTool'>
-                <Tooltip placement='right' isOpen={this.state.YDtooltipOpen} target='YDTool' toggle={this.toggleYD}>
+                <Tooltip style={{ width: "300px" }} placement='right' isOpen={this.state.YDtooltipOpen} target='YDTool' toggle={this.toggleYD}>
                   <Media>
                     <Media left href='#'>
                       <img width='64px' src='http://serhouston.org/wp-content/uploads/2018/09/Jasson-Portocarrero.png' />
@@ -54,7 +59,7 @@ export default class FourSquare extends React.Component {
                       <Media heading>
                        Jasson's Story
                       </Media>
-                      “It’s been a great experience. I learned so much, and now since I’ve started my job I’m learning even more. It’s been very satisfying working with MCA – it’s like a team working together to create one big idea. It’s been almost a month now and they really appreciate me.” -Jasson Portocarrero, High School Graduate
+                      “It’s been a great experience. I learned so much, and now since I’ve started my job I’m learning even more.
                     </Media>
                   </Media>
                 </Tooltip>
