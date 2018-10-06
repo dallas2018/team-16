@@ -13,7 +13,7 @@ import Sub9 from "./Sub9";
 class Landing extends React.Component {
   constructor (props) {
     super(props);
-    this.options = ["Basic Info", "Demographics", "Youth", "Family", "Education", "Veteran", "Entered", "Employment", "Your Needs"];
+    this.options = ["Basic Info", "Demographics", "Youth", "Family", "Education", "Veteran", "Re-entry", "Employment", "Your Needs"];
     this.state = { width: 0, index: 1, pVal: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.incrementCount = this.incrementCount.bind(this);

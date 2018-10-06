@@ -52,10 +52,8 @@ class Sub1 extends React.Component {
               <FormText>000-00-0000</FormText>
             </FormGroup>
             <FormGroup>
-              <Label for='examplePassword'>Birthday</Label>
-              <Input />
-              <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
-              <FormText>01/01/2000</FormText>
+              <Label for='exampleDate'>Date</Label>
+              <Input type='date' name='date' id='exampleDate' placeholder='date placeholder' />
             </FormGroup>
             <FormGroup>
               <Label for='exampleEmail'>Email</Label>
