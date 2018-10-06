@@ -9,6 +9,7 @@ import Sub6 from "./Sub6";
 import Sub7 from "./Sub7";
 import Sub8 from "./Sub8";
 import Sub9 from "./Sub9";
+import FinalPage from "./FinalPage";
 
 class Landing extends React.Component {
   constructor (props) {
@@ -34,13 +35,13 @@ class Landing extends React.Component {
   }
 
   incrementCount () {
-    var newindex = this.state.index + 1 >= 7 ? 7 : this.state.index + 1;
-    this.setState({ index: newindex, pVal: Math.max(this.state.pVal, newindex * 15) });
+    var newindex = this.state.index + 1 >= 10 ? 10 : this.state.index + 1;
+    this.setState({ index: newindex, pVal: Math.max(this.state.pVal, newindex * 10) });
   }
 
   decrementCount () {
     var newindex = this.state.index - 1 <= 0 ? 0 : this.state.index - 1;
-    this.setState({ index: newindex, pVal: Math.min(this.state.pVal, (newindex) * 15) });
+    this.setState({ index: newindex, pVal: Math.min(this.state.pVal, (newindex) * 10) });
   }
   render () {
     return (
@@ -81,6 +82,10 @@ class Landing extends React.Component {
         {
           this.state.index === 9 &&
           <Sub9 />
+        }
+        {
+          this.state.index === 10 &&
+          <FinalPage />
         }
       </React.Fragment>
     );
