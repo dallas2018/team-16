@@ -2,7 +2,7 @@ import React from "react";
 import Question from "./Question";
 import Drop from "./Drop";
 import { Flex } from "grid-styled";
-import TextBox from "./TextBox";
+import { Label, Input } from "reactstrap";
 
 class Sub2 extends React.Component {
   constructor (props) {
@@ -36,33 +36,33 @@ class Sub2 extends React.Component {
             <Question title='Are you currently on probation or parole?' />
             <Drop options={["Yes", "No"]} />
           </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='If Yes, when?' />
-            <TextBox />
+          <div style={{ padding: "25px", width: "45vw" }}>
+            <Label for='examplePassword'>If Yes, when?</Label>
+            <Input />
           </div>
           <div style={{ padding: "25px" }}>
             <Question title='Have you ever been incarcerated?' />
             <Drop options={["Yes", "No"]} />
           </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='If Yes, when?' />
-            <TextBox />
+          <div style={{ padding: "25px", width: "45vw" }}>
+            <Label for='examplePassword'>If Yes, when?</Label>
+            <Input />
           </div>
           <div style={{ padding: "25px" }}>
             <Question title='Are you currently residing in a halfway house?' />
             <Drop options={["Yes", "No"]} />
           </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='If Yes, what is the location?' />
-            <TextBox />
+          <div style={{ padding: "25px", width: "45vw" }}>
+            <Label for='examplePassword'>If Yes, when?</Label>
+            <Input />
           </div>
           <div style={{ padding: "25px" }}>
             <Question title='Are you wearing an ankle monitor?' />
             <Drop options={["Yes", "No"]} />
           </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='If Yes, enter the date of removal' />
-            <TextBox />
+          <div style={{ padding: "25px", width: "45vw" }}>
+            <Label for='examplePassword'>If Yes, enter the date of removal.</Label>
+            <Input />
           </div>
         </Flex>
 

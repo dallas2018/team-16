@@ -2,8 +2,7 @@ import React from "react";
 import Question from "./Question";
 import Drop from "./Drop";
 import { Flex } from "grid-styled";
-import TextBox from "./TextBox";
-import { FormGroup, Label, Input } from "reactstrap";
+import { FormGroup, Label, Input, FormFeedback } from "reactstrap";
 
 class Sub4 extends React.Component {
   constructor (props) {
@@ -45,17 +44,22 @@ class Sub4 extends React.Component {
             <Question title='What is your household income?' />
             <Drop options={["$0-$10,000", "$10,000-50,000", "$50,000 - $100,000"]} />
           </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='How many children under 17 live in your household?' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='How many young adults (18-24) live in your household?' />
-            <TextBox />
-          </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='How many elders live in your household?' />
-            <TextBox />
+          <div style={{ width: "45vw", marginLeft: "28px" }}>
+            <FormGroup>
+              <Label for='examplePassword'>How many children under 17 live in your household?</Label>
+              <Input />
+              <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
+            </FormGroup>
+            <FormGroup>
+              <Label for='examplePassword'>How many young adults (18-24) live in your household?</Label>
+              <Input />
+              <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
+            </FormGroup>
+            <FormGroup>
+              <Label for='examplePassword'>How many elders live in your household?</Label>
+              <Input />
+              <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
+            </FormGroup>
           </div>
           <div style={{ padding: "25px" }}>
             <Question title='Check all that apply:' />

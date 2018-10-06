@@ -1,8 +1,9 @@
 import React from "react";
 import Question from "./Question";
 import Drop from "./Drop";
-import TextBox from "./TextBox";
 import { Flex } from "grid-styled";
+import { Label, Input, FormFeedback } from "reactstrap";
+
 class Sub5 extends React.Component {
   constructor (props) {
     super(props);
@@ -35,9 +36,10 @@ class Sub5 extends React.Component {
             <Question title='Are you currently in school?' />
             <Drop options={["Yes", "No"]} />
           </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='If Yes, where are you studying?' />
-            <TextBox />
+          <div style={{ padding: "25px", width: "45vw" }}>
+            <Label for='examplePassword'>If Yes, where are you studying?</Label>
+            <Input />
+            <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
           </div>
           <div style={{ padding: "25px" }}>
             <Question title='Rate your computer skills:' />
@@ -47,9 +49,10 @@ class Sub5 extends React.Component {
             <Question title='What is your English Literacy level?' />
             <Drop options={["Low", "Medium", "High"]} />
           </div>
-          <div style={{ padding: "25px" }}>
-            <Question title='List any certificates or relevant training experiences:' />
-            <TextBox />
+          <div style={{ padding: "25px", width: "45vw" }}>
+            <Label for='examplePassword'>List any certificates or relevant training experiences:</Label>
+            <Input />
+            <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
           </div>
         </Flex>
       </React.Fragment>
