@@ -5,8 +5,9 @@ class Drop extends React.Component {
   constructor (props) {
     super(props);
     this.toggle = this.toggle.bind(this);
-    this.state = { width: 0, showFaqPage: true, dropdownOpen: false, options: [] };
+    this.state = { width: 0, showFaqPage: true, dropdownOpen: false, options: [], curr: "Select One" };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   toggle () {
@@ -27,26 +28,24 @@ class Drop extends React.Component {
     this.setState({ width: window.innerWidth });
   }
 
-  createDropdown (arr) {
-    var drops = [];
-    var i;
-    if (arr) {
-      for (i = 0; i < arr.length; i++) {
-        drops.push(<DropdownItem>{arr[i]}</DropdownItem>);
-      }
-    }
-    return drops;
+  handleClick (e) {
+    console.log(e);
+    this.setState({ curr: e });
   }
 
   render () {
+    const listItems = this.state.options.map((listItem) =>
+      <DropdownItem>{listItem}</DropdownItem>
+    );
+
     return (
       <React.Fragment>
         <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
           <DropdownToggle caret>
-            Select One
+            {this.state.curr}
           </DropdownToggle>
           <DropdownMenu>
-            {this.createDropdown(this.state.options)}
+            {listItems}
           </DropdownMenu>
         </Dropdown>
       </React.Fragment>
