@@ -1,10 +1,7 @@
 import React from "react";
-import Question from "./Question";
-import Drop from "./Drop";
-import TopBar from "./TopBar";
-import TextBox from "./TextBox";
+import { FormGroup, Label, Input } from "reactstrap";
 
-class Landing extends React.Component {
+class TextBox extends React.Component {
   constructor (props) {
     super(props);
     this.state = { width: 0, showFaqPage: true };
@@ -27,13 +24,13 @@ class Landing extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Question title='Test!' />
-        <Drop options={["Test", "Test1", "Test2"]} />
-        <TopBar />
-        <TextBox />
+        <FormGroup>
+          <Label for='exampleText'>Text Area</Label>
+          <Input type='textarea' name='text' id='exampleText' />
+        </FormGroup>
       </React.Fragment>
     );
   }
 }
 
-export default Landing;
+export default TextBox;
