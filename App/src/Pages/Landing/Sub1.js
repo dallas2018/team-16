@@ -2,6 +2,8 @@ import React from "react";
 import Question from "./Question";
 import { Flex } from "grid-styled";
 import TextBox from "./TextBox";
+import { FormGroup, Label, Input } from "reactstrap";
+import axios from "axios";
 
 class Sub1 extends React.Component {
   constructor (props) {
@@ -21,6 +23,11 @@ class Sub1 extends React.Component {
 
   updateWindowDimensions () {
     this.setState({ width: window.innerWidth });
+  }
+
+  handleClick () {
+    console.log("here");
+    axios.get("https://cnnflaskapi.herokuapp.com/text");
   }
 
   render () {
@@ -62,6 +69,15 @@ class Sub1 extends React.Component {
           <div style={{ padding: "25px" }}>
             <Question title='Phone' />
             <TextBox />
+          </div>
+          <div style={{ padding: "25px" }}>
+            <Question title='Can we text you?' />
+            <FormGroup check>
+              <Label check>
+                <Input onClick={this.handleClick} type='checkbox' />{" "}
+                Yes
+              </Label><br />
+            </FormGroup>
           </div>
         </Flex>
       </React.Fragment>
