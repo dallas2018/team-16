@@ -31,7 +31,7 @@ class Sub1 extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Flex style={{ flexDirection: "column", paddingLeft: "40px", paddingTop: "50px", marginRight: "70vw" }} >
+        <Flex style={{ flexDirection: "column", paddingLeft: "40px", paddingTop: "50px", marginRight: "70vw", alignContent: "center", width: "50vw" }} >
           <Form>
             <FormGroup>
               <Label for='exampleEmail'>Full Name</Label>
