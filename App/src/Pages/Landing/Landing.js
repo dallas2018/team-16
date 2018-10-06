@@ -1,14 +1,20 @@
 import React from "react";
-import Question from "./Question";
-import Drop from "./Drop";
 import TopBar from "./TopBar";
-import TextBox from "./TextBox";
+import Sub1 from "./Sub1";
+import Sub2 from "./Sub2";
+import Sub3 from "./Sub3";
+import Sub5 from "./Sub5";
+import Sub6 from "./Sub6";
+import Sub7 from "./Sub7";
+import Sub9 from "./Sub9";
 
 class Landing extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { width: 0, showFaqPage: true };
+    this.state = { width: 0, index: 1, pVal: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.incrementCount = this.incrementCount.bind(this);
+    this.decrementCount = this.decrementCount.bind(this);
   }
 
   componentDidMount () {
@@ -24,13 +30,46 @@ class Landing extends React.Component {
     this.setState({ width: window.innerWidth });
   }
 
+  incrementCount () {
+    console.log(this.state.pVal + " Before");
+    this.setState({ index: this.state.index + 1, pVal: Math.max(this.state.pVal, this.state.index * 10) });
+  }
+
+  decrementCount () {
+    this.setState({ index: this.state.index - 1 });
+  }
   render () {
     return (
       <React.Fragment>
-        <Question title='Test!' />
-        <Drop options={["Test", "Test1", "Test2"]} />
-        <TopBar />
-        <TextBox />
+        <TopBar name='Hello' decrementFunc={this.decrementCount} incrementFunc={this.incrementCount} val={this.state.pVal} />
+        {
+          this.state.index === 1 &&
+          <Sub1 />
+        }
+        {
+          this.state.index === 2 &&
+          <Sub2 />
+        }
+        {
+          this.state.index === 3 &&
+          <Sub3 />
+        }
+        {
+          this.state.index === 4 &&
+          <Sub5 />
+        }
+        {
+          this.state.index === 5 &&
+          <Sub6 />
+        }
+        {
+          this.state.index === 6 &&
+          <Sub7 />
+        }
+        {
+          this.state.index === 7 &&
+          <Sub9 />
+        }
       </React.Fragment>
     );
   }

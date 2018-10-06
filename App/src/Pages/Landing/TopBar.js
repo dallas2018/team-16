@@ -6,7 +6,7 @@ import { FontAwesome } from "react-js-vector-icons";
 class TopBar extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { width: 0, showFaqPage: true };
+    this.state = { width: 0, showFaqPage: true, sectionName: props.name };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
   componentDidMount () {
@@ -25,16 +25,20 @@ class TopBar extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Flex style={{ width: "100%", padding: "50px", border: "2px solid black" }}>
-          <div style={{ fontSize: "35px", padding: "20px" }}>SubSection</div>
+        <Flex style={{ width: "100%", padding: "50px" }}>
+          <div style={{ fontSize: "35px", padding: "20px" }}>{this.state.sectionName}</div>
           <Flex style={{ marginLeft: "-12vw", alignSelf: "center", justifyContent: "center", width: "100%" }}>
-            <FontAwesome name='chevron-left'
-              size={20}
-            />
-            <Progress style={{ alignSelf: "center", width: "450px", marginLeft: "15px", marginRight: "15px" }} color='success' value='30' />
-            <FontAwesome name='chevron-right'
-              size={20}
-            />
+            <div onClick={this.props.decrementFunc}>
+              <FontAwesome name='chevron-left'
+                size={20}
+              />
+            </div>
+            <Progress style={{ fontSize: "100px", alignSelf: "center", width: "450px", marginLeft: "15px", marginRight: "15px" }} color='success' value={this.props.val} />
+            <div onClick={this.props.incrementFunc}>
+              <FontAwesome name='chevron-right'
+                size={20}
+              />
+            </div>
           </Flex>
         </Flex>
       </React.Fragment>

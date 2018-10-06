@@ -1,5 +1,5 @@
 import React from "react";
-import { FormGroup, Label, Input } from "reactstrap";
+import { FormGroup, Input } from "reactstrap";
 
 class TextBox extends React.Component {
   constructor (props) {
@@ -12,7 +12,6 @@ class TextBox extends React.Component {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
   }
-
   componentWillUnmount () {
     window.removeEventListener("resize", this.updateWindowDimensions);
   }
@@ -24,8 +23,7 @@ class TextBox extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <FormGroup>
-          <Label for='exampleText'>Text Area</Label>
+        <FormGroup style={{ width: "50vw", marginTop: "25px" }}>
           <Input type='textarea' name='text' id='exampleText' />
         </FormGroup>
       </React.Fragment>
