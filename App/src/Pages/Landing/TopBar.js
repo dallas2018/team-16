@@ -25,9 +25,9 @@ class TopBar extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Flex style={{ width: "100%", padding: "50px" }}>
-          <div style={{ fontSize: "35px", padding: "20px" }}>{this.props.name}</div>
-          <Flex style={{ marginLeft: "-12vw", alignSelf: "center", justifyContent: "center", width: "100%" }}>
+        <Flex style={{ width: "100%", padding: "80px", paddingBottom: "40px", paddingLeft: "40px" }}>
+          <div style={{ fontSize: "35px", padding: "20px", width: "35%" }}>{this.props.name}</div>
+          <Flex style={{ alignSelf: "center", justifyContent: "center", width: "100%", marginRight: "18vw" }}>
             <div onClick={this.props.decrementFunc}>
               <FontAwesome name='chevron-left'
                 size={20}
