@@ -1,6 +1,6 @@
 import React from "react";
 import TopBar from "./TopBar";
-// import Sub1 from "./Sub1";
+import Sub1 from "./Sub1";
 import Sub2 from "./Sub2";
 import Sub3 from "./Sub3";
 import Sub4 from "./Sub4";
@@ -9,7 +9,6 @@ import Sub6 from "./Sub6";
 import Sub7 from "./Sub7";
 import Sub8 from "./Sub8";
 import Sub9 from "./Sub9";
-import FourSquare from "./foursquare";
 
 class Landing extends React.Component {
   constructor (props) {
@@ -49,7 +48,7 @@ class Landing extends React.Component {
         <TopBar name={this.options[ this.state.index - 1 ]} decrementFunc={this.decrementCount} incrementFunc={this.incrementCount} val={this.state.pVal} />
         {
           this.state.index === 1 &&
-          <FourSquare />
+          <Sub1 />
         }
         {
           this.state.index === 2 &&

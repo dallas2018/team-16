@@ -40,7 +40,7 @@ export default class FourSquare extends React.Component {
 
   render () {
     return (
-      <div>
+      <div style={{ marginLeft: "20vw" }}>
         <Row>
           <Col sm='4'>
             <Card>
