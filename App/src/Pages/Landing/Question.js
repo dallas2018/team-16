@@ -1,12 +1,9 @@
 import React from "react";
-import Question from "./Question";
-import Drop from "./Drop";
-import TopBar from "./TopBar";
 
-class Landing extends React.Component {
+class Question extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { width: 0, showFaqPage: true };
+    this.state = { width: 0, showFaqPage: true, title: props.title };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -26,12 +23,10 @@ class Landing extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Question title='Test!' />
-        <Drop options={["Test", "Test1", "Test2"]} />
-        <TopBar />
+        { this.state.title }
       </React.Fragment>
     );
   }
 }
 
-export default Landing;
+export default Question;
