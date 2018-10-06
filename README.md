@@ -1,3 +1,10 @@
 # team-16
 
-Welcome kiddos!
+Preparation:
+
+'npm install'
+'yarn add'
+
+Run local:
+
+'yarn start'
