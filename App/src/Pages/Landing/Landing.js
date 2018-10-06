@@ -1,6 +1,8 @@
 import React from "react";
 import Question from "./Question";
 import Drop from "./Drop";
+import TopBar from "./TopBar";
+
 class Landing extends React.Component {
   constructor (props) {
     super(props);
@@ -26,6 +28,7 @@ class Landing extends React.Component {
       <React.Fragment>
         <Question title='Test!' />
         <Drop options={["Test", "Test1", "Test2"]} />
+        <TopBar />
       </React.Fragment>
     );
   }
