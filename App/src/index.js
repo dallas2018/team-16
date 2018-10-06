@@ -11,7 +11,7 @@ ReactDOM.render(<PageRouter />, document.getElementById("root"));
 (function () {
     var div = document.createElement("div");
     document.getElementsByTagName('body')[0].appendChild(div);
-    div.outerHTML = "<div id='botDiv' style='height: 38px; position: fixed; bottom: 0; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 400px; position:fixed; cursor: pointer;'></div><iframe width='400px' height='600px' src='https://webchat.botframework.com/embed/SERFAQ?s=zTD-63LmXVs.cwA.Z5o.BtSCn0eBkHPYrMSjo7lFTMhVfIgKT_yYSVtGPCFMYpI'></iframe></div>"; 
+    div.outerHTML = "<div id='botDiv' style='height: 38px; position: fixed; bottom: 0; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 400px; position:fixed; cursor: pointer;'></div <iframe width='400px' height='600px' src='https://webchat.botframework.com/embed/SERFAQ?s=zTD-63LmXVs.cwA.Z5o.BtSCn0eBkHPYrMSjo7lFTMhVfIgKT_yYSVtGPCFMYpI'></iframe></div>"; 
 
     document.querySelector('body').addEventListener('click', function (e) {
         e.target.matches = e.target.matches || e.target.msMatchesSelector;
