@@ -9,12 +9,14 @@ import Sub6 from "./Sub6";
 import Sub7 from "./Sub7";
 import Sub8 from "./Sub8";
 import Sub9 from "./Sub9";
+import FinalPage from "./FinalPage";
+import FourSquare from "./foursquare";
 
 class Landing extends React.Component {
   constructor (props) {
     super(props);
-    this.options = ["Basic Info", "Demographics", "Youth", "Family", "Education", "Veteran", "Re-entry", "Employment", "Your Needs"];
-    this.state = { width: 0, index: 1, pVal: 0 };
+    this.options = ["Success Stories", "Basic Info", "Demographics", "Youth", "Family", "Education", "Veteran", "Re-entry", "Employment", "Your Needs"];
+    this.state = { width: 0, index: 0, pVal: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.incrementCount = this.incrementCount.bind(this);
     this.decrementCount = this.decrementCount.bind(this);
@@ -34,18 +36,22 @@ class Landing extends React.Component {
   }
 
   incrementCount () {
-    var newindex = this.state.index + 1 >= 7 ? 7 : this.state.index + 1;
-    this.setState({ index: newindex, pVal: Math.max(this.state.pVal, newindex * 15) });
+    var newindex = this.state.index + 1 >= 10 ? 10 : this.state.index + 1;
+    this.setState({ index: newindex, pVal: Math.max(this.state.pVal, newindex * 10) });
   }
 
   decrementCount () {
     var newindex = this.state.index - 1 <= 0 ? 0 : this.state.index - 1;
-    this.setState({ index: newindex, pVal: Math.min(this.state.pVal, (newindex) * 15) });
+    this.setState({ index: newindex, pVal: Math.min(this.state.pVal, (newindex) * 10) });
   }
   render () {
     return (
       <React.Fragment>
-        <TopBar name={this.options[ this.state.index - 1 ]} decrementFunc={this.decrementCount} incrementFunc={this.incrementCount} val={this.state.pVal} />
+        <TopBar name={this.options[ this.state.index ]} decrementFunc={this.decrementCount} incrementFunc={this.incrementCount} val={this.state.pVal} />
+        {
+          this.state.index === 0 &&
+          <FourSquare />
+        }
         {
           this.state.index === 1 &&
           <Sub1 />
@@ -81,6 +87,10 @@ class Landing extends React.Component {
         {
           this.state.index === 9 &&
           <Sub9 />
+        }
+        {
+          this.state.index === 10 &&
+          <FinalPage />
         }
       </React.Fragment>
     );
