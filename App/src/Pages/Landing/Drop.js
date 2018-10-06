@@ -39,7 +39,7 @@ class Drop extends React.Component {
     if (arr) {
       for (i = 0; i < arr.length; i++) {
         var a = arr[i];
-        drops.push(<DropdownItem onClick={this.handleClick} >{a}</DropdownItem>);
+        drops.push(<DropdownItem key={i} onClick={this.handleClick} >{a}</DropdownItem>);
       }
     }
     return drops;
