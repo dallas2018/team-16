@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/AvenirNext-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: bold;
+  font-weight: 600;
+  src: url('./assets/fonts/AvenirNext-DemiBold.ttf') format('truetype')
+}
+
+body {
+  font-family: 'AvenirNext', 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.ant-row.ant-form-item {
+  margin-right: 5px !important;
+}
+
