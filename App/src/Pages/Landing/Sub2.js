@@ -41,7 +41,8 @@ class Sub2 extends React.Component {
             <Drop options={["Black or African American", "American Indian or Alaskan Native", "Asian (Not Pacific Islander)", "Hawaiian Native or Pacific Islander", "White or Caucasian", "Two or more"]} />
           </div>
           <div style={{ padding: "25px" }}>
-            <Question title='What is your preferred language of communication? We will try to match you with a mentor fluent in that language if possible.' />
+            <Question title='What is your preferred language of communication?' /> <br />
+            <Question title='We will try to match you with a mentor fluent in that language if possible.' />
             <Drop options={["English", "Spanish", "Japanese", "Russian"]} />
           </div>
           <div style={{ padding: "25px" }}>

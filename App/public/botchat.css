@@ -4,7 +4,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   font-size: 15px; }
 
 .wc-app button {
-  background-color: #2582B2;
+  background-color: #404040;
   border: 1px solid #cccccc;
   border-radius: 1px;
   color: #ffffff;
@@ -23,7 +23,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   visibility: hidden; }
 
 .wc-header {
-  background-color: #2582B2;
+  background-color: #404040;
   box-shadow: 0 1px rgba(0, 0, 0, 0.2);
   box-sizing: content-box;
   color: #ffffff;
@@ -81,7 +81,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
       max-width: 40%; }
       .wc-suggested-actions .wc-hscroll > ul > li button {
         background-color: #fff;
-        color: #2582B2;
+        color: #404040;
         min-height: 32px;
         overflow: hidden;
         padding: 0 16px;
@@ -91,11 +91,11 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
       .wc-suggested-actions .wc-hscroll > ul > li button:focus,
       .wc-suggested-actions .wc-hscroll > ul > li button:hover {
         background-color: #fff;
-        border-color: #2582B2;
-        color: #2582B2; }
+        border-color: #404040;
+        color: #404040; }
       .wc-suggested-actions .wc-hscroll > ul > li button:active {
-        background-color: #2582B2;
-        border-color: #2582B2;
+        background-color: #404040;
+        border-color: #404040;
         color: #ffffff; }
   .wc-suggested-actions button.scroll {
     background-color: #d2dde5;
@@ -206,17 +206,17 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
     margin: 8px 8px 0 8px; }
   .wc-card button {
     background-color: transparent;
-    color: #2582B2;
+    color: #404040;
     min-height: 32px;
     width: 100%;
     padding: 0 16px; }
   .wc-card button:hover {
     background-color: transparent;
-    border-color: #2582B2;
-    color: #2582B2; }
+    border-color: #404040;
+    color: #404040; }
   .wc-card button:active {
-    background-color: #2582B2;
-    border-color: #2582B2;
+    background-color: #404040;
+    border-color: #404040;
     color: #ffffff; }
   .wc-card.receipt table {
     border-collapse: collapse;
@@ -376,11 +376,11 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
   text-align: right; }
 
 .wc-message-from-me .wc-message-content {
-  background-color: #2582B2;
+  background-color: #404040;
   color: #ffffff; }
 
 .wc-message-from-me svg.wc-message-callout path {
-  fill: #2582B2; }
+  fill: #404040; }
 
 .wc-message-from-me svg.wc-message-callout path.point-left {
   display: none; }
@@ -438,7 +438,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
     resize: none;
     width: 100%; }
   .wc-console.has-text .wc-send svg {
-    fill: #2582B2; }
+    fill: #404040; }
   .wc-console .wc-upload {
     cursor: pointer;
     position: relative; }
@@ -484,7 +484,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
     visibility: hidden; }
 
 .wc-console.has-text .wc-send svg {
-  fill: #2582B2; }
+  fill: #404040; }
 
 /* animation */
 .wc-typing {
@@ -556,17 +556,17 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
     background-repeat: no-repeat; }
 
 .wc-message-from-bot a.wc-link-download:hover {
-  color: #2582B2;
+  color: #404040;
   opacity: 1; }
   .wc-message-from-bot a.wc-link-download:hover .wc-icon-download {
-    background-image: url('data:image/svg+xml;utf8,<svg width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg"><path d="M.435 20v-1.25h11.13V20H.435zM12 10.44l-6 6.113-6-6.114.87-.88 4.512 4.59V0h1.236v14.15l4.512-4.59.87.88z" fill="#2582B2" fill-rule="evenodd"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg"><path d="M.435 20v-1.25h11.13V20H.435zM12 10.44l-6 6.113-6-6.114.87-.88 4.512 4.59V0h1.236v14.15l4.512-4.59.87.88z" fill="#404040" fill-rule="evenodd"/></svg>');
     background-repeat: no-repeat; }
 
 .wc-message-from-bot a.wc-link-download:active {
-  color: #2582B2;
+  color: #404040;
   opacity: 0.8; }
   .wc-message-from-bot a.wc-link-download:active .wc-icon-download {
-    background-image: url('data:image/svg+xml;utf8,<svg width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg"><path d="M.435 20v-1.25h11.13V20H.435zM12 10.44l-6 6.113-6-6.114.87-.88 4.512 4.59V0h1.236v14.15l4.512-4.59.87.88z" fill="#2582B2" fill-rule="evenodd"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg"><path d="M.435 20v-1.25h11.13V20H.435zM12 10.44l-6 6.113-6-6.114.87-.88 4.512 4.59V0h1.236v14.15l4.512-4.59.87.88z" fill="#404040" fill-rule="evenodd"/></svg>');
     background-repeat: no-repeat; }
 
 .wc-message-from-me a.wc-link-download:link, .wc-message-from-me a.wc-link-download:visited {
