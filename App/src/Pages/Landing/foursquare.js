@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, CardText, CardBody,
-  CardTitle, CardSubtitle, Tooltip } from "reactstrap";
+import { Card, CardBody,
+  CardTitle, CardSubtitle, Tooltip, Row, Col } from "reactstrap";
 
 export default class FourSquare extends React.Component {
   constructor (props) {
@@ -41,46 +41,54 @@ export default class FourSquare extends React.Component {
   render () {
     return (
       <div>
-        <Card>
-          <CardBody id='YDTool'>
-            <Tooltip placement='left' isOpen={this.state.YDtooltipOpen} target='YDTool' toggle={this.toggleYD}>
-              Hello world!
-            </Tooltip>
-            <CardTitle>Young Adults</CardTitle>
-            <CardSubtitle>Age: 18-24</CardSubtitle>
-            <CardText>Hover over for successful stories!</CardText>
-          </CardBody>
-        </Card>
-        <Card>
-          <CardBody id='ATool'>
-            <Tooltip placement='left' isOpen={this.state.AtooltipOpen} target='ATool' toggle={this.toggleA}>
-              Hello world!
-            </Tooltip>
-            <CardTitle>Adults</CardTitle>
-            <CardSubtitle>Age: 18 and Higher </CardSubtitle>
-            <CardText>Hover over for successful stories!</CardText>
-          </CardBody>
-        </Card>
-        <Card>
-          <CardBody id='VTool'>
-            <Tooltip placement='left' isOpen={this.state.VtooltipOpen} target='VTool' toggle={this.toggleV}>
-              Hello world!
-            </Tooltip>
-            <CardTitle>Veteran</CardTitle>
-            <CardSubtitle>Former Member of the Armed Services</CardSubtitle>
-            <CardText>Hover over for successful stories!</CardText>
-          </CardBody>
-        </Card>
-        <Card>
-          <CardBody id='PTool'>
-            <Tooltip placement='left' isOpen={this.state.PtooltipOpen} target='PTool' toggle={this.toggleP}>
-              Hello world!
-            </Tooltip>
-            <CardTitle>Rehabilitated</CardTitle>
-            <CardSubtitle>A Second Chance</CardSubtitle>
-            <CardText>Hover over for successful stories!</CardText>
-          </CardBody>
-        </Card>
+        <Row>
+          <Col sm='3'>
+            <Card>
+              <CardBody id='YDTool'>
+                <Tooltip placement='left' isOpen={this.state.YDtooltipOpen} target='YDTool' toggle={this.toggleYD}>
+                Hello world!
+                </Tooltip>
+                <CardTitle>Young Adults</CardTitle>
+                <CardSubtitle>Age: 18-24</CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col sm='3'>
+            <Card>
+              <CardBody id='ATool'>
+                <Tooltip placement='left' isOpen={this.state.AtooltipOpen} target='ATool' toggle={this.toggleA}>
+                  Hello world!
+                </Tooltip>
+                <CardTitle>Adults</CardTitle>
+                <CardSubtitle>Age: 18 and Higher </CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm='3'>
+            <Card>
+              <CardBody id='VTool'>
+                <Tooltip placement='left' isOpen={this.state.VtooltipOpen} target='VTool' toggle={this.toggleV}>
+                Hello world!
+                </Tooltip>
+                <CardTitle>Veterans</CardTitle>
+                <CardSubtitle>Former Armed Services Members</CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col sm='3'>
+            <Card>
+              <CardBody id='PTool'>
+                <Tooltip placement='left' isOpen={this.state.PtooltipOpen} target='PTool' toggle={this.toggleP}>
+                  Hello world!
+                </Tooltip>
+                <CardTitle>Reentry</CardTitle>
+                <CardSubtitle>Everyone deserves a second chance </CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
       </div>
     );
   }
