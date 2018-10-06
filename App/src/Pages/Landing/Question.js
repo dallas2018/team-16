@@ -23,7 +23,9 @@ class Question extends React.Component {
   render () {
     return (
       <React.Fragment>
-        { this.state.title }
+        <div style={{ fontSize: "25px" }}>
+          { this.state.title }
+        </div>
       </React.Fragment>
     );
   }
