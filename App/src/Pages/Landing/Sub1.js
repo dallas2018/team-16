@@ -2,6 +2,7 @@ import React from "react";
 import { Flex } from "grid-styled";
 import { Form, FormGroup, Label, Input, FormFeedback, FormText } from "reactstrap";
 import axios from "axios";
+import Question from "./Question";
 
 class Sub1 extends React.Component {
   constructor (props) {
@@ -66,6 +67,13 @@ class Sub1 extends React.Component {
               <Input />
               <FormFeedback>You will not be able to see this</FormFeedback>
               <FormText>(###)-###-####</FormText>
+            </FormGroup>
+            <Question title='Can we text you?' />
+            <FormGroup check>
+              <Label check>
+                <Input onClick={this.handleClick} type='checkbox' />{" "}
+                Yes!
+              </Label><br />
             </FormGroup>
           </Form>
         </Flex>
